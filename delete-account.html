@@ -28,18 +28,6 @@
     li {
       margin-bottom: 12px;
     }
-    .step-number {
-      display: inline-block;
-      background: #1A73E8;
-      color: white;
-      border-radius: 50%;
-      width: 24px;
-      height: 24px;
-      text-align: center;
-      line-height: 24px;
-      margin-right: 8px;
-      font-weight: bold;
-    }
     .contact {
       background: #f5f5f5;
       padding: 15px;
@@ -56,60 +44,168 @@
     a {
       color: #1A73E8;
     }
+    .lang-switch {
+      text-align: right;
+      margin-bottom: 20px;
+    }
+    .lang-switch button {
+      background: #1A73E8;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .lang-switch button:hover {
+      background: #1557b0;
+    }
+    [dir="rtl"] {
+      text-align: right;
+    }
+    [dir="rtl"] ul,
+    [dir="rtl"] ol {
+      padding-right: 20px;
+      padding-left: 0;
+    }
+    [dir="rtl"] .lang-switch {
+      text-align: left;
+    }
+    .hidden {
+      display: none;
+    }
   </style>
 </head>
 <body>
-  <h1>Delete Your Moment Share Account</h1>
-
-  <p>
-    You can delete your Moment Share account and all associated data
-    directly from within the app. This page describes the process and
-    what data is removed.
-  </p>
-
-  <h2>How to Delete Your Account from the App</h2>
-  <ol>
-    <li>Open the Moment Share app on your phone</li>
-    <li>Tap the <strong>Settings</strong> icon at the bottom of the screen</li>
-    <li>Scroll down and tap <strong>Delete Account</strong></li>
-    <li>Confirm the deletion (you'll be asked twice for safety)</li>
-    <li>Your account and all associated data will be permanently deleted immediately</li>
-  </ol>
-
-  <div class="warning">
-    <strong>Warning:</strong> Account deletion is permanent and cannot be undone.
-    All your photos, groups, comments, and profile data will be removed.
+  <div class="lang-switch">
+    <button onclick="toggleLang()">العربية / English</button>
   </div>
 
-  <h2>What Data Gets Deleted</h2>
-  <ul>
-    <li>Your profile (name, photo, phone number)</li>
-    <li>All photos you uploaded</li>
-    <li>Your comments on other users' photos</li>
-    <li>Your group memberships</li>
-    <li>Groups you created (if you're the only member)</li>
-    <li>Your authentication account</li>
-  </ul>
+  <!-- English version -->
+  <div id="en">
+    <h1>Delete Your Moment Share Account</h1>
 
-  <h2>What Data Is Retained</h2>
-  <ul>
-    <li>None. All data associated with your account is permanently deleted.</li>
-  </ul>
-
-  <h2>Can't Access the App?</h2>
-  <p>
-    If you cannot access the app to delete your account, please contact us
-    by email and we will manually delete your account and all associated data
-    within 30 days.
-  </p>
-
-  <div class="contact">
-    <h2 style="margin-top:0">Contact Us</h2>
     <p>
-      Email: <a href="mailto:support@momentshare.app">support@momentshare.app</a><br>
-      Subject: <strong>Account Deletion Request</strong><br>
-      Include: Your phone number used for the account
+      You can delete your Moment Share account and all associated data
+      directly from within the app. This page describes the process and
+      what data is removed.
     </p>
+
+    <h2>How to Delete Your Account from the App</h2>
+    <ol>
+      <li>Open the Moment Share app on your phone</li>
+      <li>Tap the <strong>Settings</strong> icon at the bottom of the screen</li>
+      <li>Scroll down and tap <strong>Delete Account</strong></li>
+      <li>Confirm the deletion (you'll be asked twice for safety)</li>
+      <li>Your account and all associated data will be permanently deleted immediately</li>
+    </ol>
+
+    <div class="warning">
+      <strong>Warning:</strong> Account deletion is permanent and cannot be undone.
+      All your photos, groups, comments, and profile data will be removed.
+    </div>
+
+    <h2>What Data Gets Deleted</h2>
+    <ul>
+      <li>Your profile (name, photo, phone number)</li>
+      <li>All photos you uploaded</li>
+      <li>Your comments on other users' photos</li>
+      <li>Your group memberships</li>
+      <li>Groups you created (if you're the only member)</li>
+      <li>Your authentication account</li>
+    </ul>
+
+    <h2>What Data Is Retained</h2>
+    <ul>
+      <li>None. All data associated with your account is permanently deleted.</li>
+    </ul>
+
+    <h2>Can't Access the App?</h2>
+    <p>
+      If you cannot access the app to delete your account, please contact us
+      by email and we will manually delete your account and all associated data
+      within 30 days.
+    </p>
+
+    <div class="contact">
+      <h2 style="margin-top:0">Contact Us</h2>
+      <p>
+        Email: <a href="mailto:momentshare.support@gmail.com">momentshare.support@gmail.com</a><br>
+        Subject: <strong>Account Deletion Request</strong><br>
+        Include: Your phone number used for the account
+      </p>
+    </div>
   </div>
+
+  <!-- Arabic version -->
+  <div id="ar" class="hidden" dir="rtl">
+    <h1>حذف حساب Moment Share</h1>
+
+    <p>
+      يمكنك حذف حسابك في Moment Share وجميع البيانات المرتبطة به
+      مباشرةً من داخل التطبيق. توضّح هذه الصفحة الإجراءات والبيانات التي سيتم حذفها.
+    </p>
+
+    <h2>كيفية حذف حسابك من التطبيق</h2>
+    <ol>
+      <li>افتح تطبيق Moment Share على هاتفك</li>
+      <li>اضغط على أيقونة <strong>الإعدادات</strong> في أسفل الشاشة</li>
+      <li>مرّر للأسفل واضغط على <strong>حذف الحساب</strong></li>
+      <li>أكّد الحذف (سيُطلب منك التأكيد مرتين للأمان)</li>
+      <li>سيتم حذف حسابك وجميع البيانات المرتبطة به نهائياً وفوراً</li>
+    </ol>
+
+    <div class="warning">
+      <strong>تحذير:</strong> عملية حذف الحساب دائمة ولا يمكن التراجع عنها.
+      ستتم إزالة جميع صورك ومجموعاتك وتعليقاتك وبيانات ملفك الشخصي.
+    </div>
+
+    <h2>البيانات التي سيتم حذفها</h2>
+    <ul>
+      <li>ملفك الشخصي (الاسم، الصورة، رقم الهاتف)</li>
+      <li>جميع الصور التي رفعتها</li>
+      <li>تعليقاتك على صور المستخدمين الآخرين</li>
+      <li>عضوياتك في المجموعات</li>
+      <li>المجموعات التي أنشأتها (إذا كنت العضو الوحيد فيها)</li>
+      <li>حساب المصادقة الخاص بك</li>
+    </ul>
+
+    <h2>البيانات التي يتم الاحتفاظ بها</h2>
+    <ul>
+      <li>لا شيء. يتم حذف جميع البيانات المرتبطة بحسابك نهائياً.</li>
+    </ul>
+
+    <h2>هل تتعذّر عليك الوصول إلى التطبيق؟</h2>
+    <p>
+      إذا لم تتمكّن من الوصول إلى التطبيق لحذف حسابك، يُرجى التواصل معنا
+      عبر البريد الإلكتروني وسنحذف حسابك وجميع البيانات المرتبطة به يدوياً
+      في غضون 30 يوماً.
+    </p>
+
+    <div class="contact">
+      <h2 style="margin-top:0">اتصل بنا</h2>
+      <p>
+        البريد الإلكتروني: <a href="mailto:momentshare.support@gmail.com">momentshare.support@gmail.com</a><br>
+        الموضوع: <strong>طلب حذف الحساب</strong><br>
+        قم بتضمين: رقم الهاتف المستخدم للحساب
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function toggleLang() {
+      const en = document.getElementById('en');
+      const ar = document.getElementById('ar');
+      if (en.classList.contains('hidden')) {
+        en.classList.remove('hidden');
+        ar.classList.add('hidden');
+        document.documentElement.lang = 'en';
+      } else {
+        en.classList.add('hidden');
+        ar.classList.remove('hidden');
+        document.documentElement.lang = 'ar';
+      }
+    }
+  </script>
 </body>
 </html>
